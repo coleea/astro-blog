@@ -51,18 +51,18 @@ const imageStyle = `object-position: ${position}`;
 ---
 <div id={id} class:list={[className, 'overflow-hidden relative image-wrapper']} style={`--theme-hue: ${siteConfig.themeColor.hue}`} data-image-wrapper>
     <!-- 加载条 -->
-    <div class="loading-bar">
+    <!-- <div class="loading-bar">
         <div class="loading-progress"></div>
-    </div>
+    </div> -->
     
     <!-- 图片内容 -->
     <div class="transition absolute inset-0 dark:bg-black/10 bg-opacity-50 pointer-events-none"></div>
-    {isLocal && img && <Image src={img} alt={alt || ""} class={imageClass} style={imageStyle} loading="eager" fetchpriority={fetchpriority} data-image-element />}
-    {!isLocal && <img src={isPublic ? url(src) : src} alt={alt || ""} class={imageClass} style={imageStyle} loading="eager" fetchpriority={fetchpriority} data-image-element />}
+    {isLocal && img && <Image onload={"this.classList.add('loaded')"} src={img} alt={alt || ""} class={imageClass} style={imageStyle} loading="eager" fetchpriority={fetchpriority} data-image-element />}
+    {!isLocal && <img onload="this.classList.add('loaded')" src={isPublic ? url(src) : src} alt={alt || ""} class={imageClass} style={imageStyle} loading="eager" fetchpriority={fetchpriority} data-image-element />}
 </div>
 
 <style>
-    .loading-bar {
+    /* .loading-bar {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -74,9 +74,9 @@ const imageStyle = `object-position: ${position}`;
         border-radius: 9999px;
         overflow: hidden;
         transition: opacity 0.5s ease-out;
-    }
+    } */
     
-    :global(.dark) .loading-bar {
+    /* :global(.dark) .loading-bar {
         background-color: rgba(75, 85, 99, 0.3);
     }
     
@@ -95,8 +95,13 @@ const imageStyle = `object-position: ${position}`;
         100% {
             transform: translateX(400%);
         }
-    }
+    } */
     
+    /* .loading-bar.hide {
+        opacity: 0;
+        pointer-events: none;
+    } */
+
     .image-content {
         opacity: 0;
         transition: opacity 0.5s ease-out, transform 0.3s ease-out;
@@ -104,12 +109,9 @@ const imageStyle = `object-position: ${position}`;
     
     .image-content.loaded {
         opacity: 1;
+        transform: scale(1.1);
     }
     
-    .loading-bar.hide {
-        opacity: 0;
-        pointer-events: none;
-    }
     
     .image-wrapper:hover .image-content.loaded {
         transform: scale(1.05);
