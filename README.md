@@ -1,7 +1,7 @@
 # 🍥Fuwari
 
 [Astro](https://astro.build)로 구축된 정적 블로그 템플릿입니다.
-
+ 
 [**🖥️미리보기 (Vercel)**](https://fuwari.vercel.app)
 
 ![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
