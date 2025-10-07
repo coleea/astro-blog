@@ -113,10 +113,10 @@ const { remarkPluginFrontmatter } = await entry.render();
       {description || remarkPluginFrontmatter.excerpt}
     </div>
 
-    <!-- 字数统计和阅读时间 -->
+    <!-- 글자 수 통계 및 읽기 시간 -->
     <div class="text-sm text-black/30 dark:text-white/30 flex gap-4 transition">
       <div>
-        {remarkPluginFrontmatter.words} 字
+        {remarkPluginFrontmatter.words} 글자
       </div>
       <div>|</div>
       <div>

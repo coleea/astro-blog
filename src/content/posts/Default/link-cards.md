@@ -8,35 +8,35 @@ draft: false
 series: Examples
 ---
 
-## About Link Cards  
-## 关于链接卡片
+## About Link Cards
+## 링크 카드 소개
 
-Link Cards are similar to the `<LinkCard>` component in [Starlight](https://starlight.astro.build), displaying links in a card format.  
-链接卡片类似于 [Starlight](https://starlight.astro.build) 中的 `<LinkCard>` 组件，以卡片形式展示链接。
+Link Cards are similar to the `<LinkCard>` component in [Starlight](https://starlight.astro.build), displaying links in a card format.
+링크 카드는 [Starlight](https://starlight.astro.build)의 `<LinkCard>` 컴포넌트와 유사하며, 링크를 카드 형식으로 표시합니다.
 
-## Usage  
-## 使用方法
-> 现已更新,调用方法如下
-### 自定义标题和描述
+## Usage
+## 사용 방법
+> 현재 업데이트됨, 호출 방법은 다음과 같습니다
+### 사용자 정의 제목 및 설명
 ```
 ::link-card{url="https://fuwari.oh1.top" title="yCENzh's Blog" description="Ciallo~"}
 ```
 ::link-card{url="https://fuwari.oh1.top" title="yCENzh's Blog" description="Ciallo~"}
 
-### 带图片
+### 이미지 포함
 ```
 ::link-card{url="https://github.com" title="Github" description="Hello World!" icon="https://github.com/github.png"}
 ```
 ::link-card{url="https://github.com" title="Github" description="Hello World!" icon="https://github.com/github.png"}
 
-> 下列均已失效
+> 아래 항목은 모두 더 이상 유효하지 않습니다
 
-Include only a single "bare" link (a link without descriptive text), or something similar, within a paragraph in Markdown, and it will automatically be converted into a Link Card.  
-在 Markdown 段落中仅包含一个"裸链接"（无描述文本的纯 URL）或类似结构，它将自动转换为链接卡片。
+Include only a single "bare" link (a link without descriptive text), or something similar, within a paragraph in Markdown, and it will automatically be converted into a Link Card.
+Markdown 단락에 설명 텍스트가 없는 단일 "베어 링크"(순수 URL) 또는 유사한 구조만 포함하면 자동으로 링크 카드로 변환됩니다.
 
 ```markdown
-**External Links**  
-**外部链接**
+**External Links**
+**외부 링크**
 
 https://astro.build/
 
@@ -44,16 +44,16 @@ https://astro.build/
 
 [https://fuwari.oh1.top/](https://fuwari.oh1.top/)
 
-**Internal Links**  
-**内部链接**
+**Internal Links**
+**내부 링크**
 
 [/archive/](/archive/)
 
-For more details, see the internalLink option section.  
-更多细节请参见 internalLink 选项部分。
+For more details, see the internalLink option section.
+자세한 내용은 internalLink 옵션 섹션을 참조하세요.
 
-**IDN (Internationalized Domain Name)**  
-**IDN（国际化域名）**
+**IDN (Internationalized Domain Name)**
+**IDN(국제화 도메인 이름)**
 
 https://はじめよう.みんな/
 ```
@@ -68,16 +68,16 @@ https://astro.build/
 
 https://はじめよう.みんな/
 
-> [!NOTE]  
-> 注意
-> Once the cards are displayed, try changing the theme color or enabling dark mode!  
-> 卡片显示后，请尝试更改主题颜色或启用暗黑模式！
+> [!NOTE]
+> 참고
+> Once the cards are displayed, try changing the theme color or enabling dark mode!
+> 카드가 표시되면 테마 색상을 변경하거나 다크 모드를 활성화해 보세요!
 
-## Options  
-## 配置选项
+## Options
+## 구성 옵션
 
-You can specify the options in the `astro.config.mjs` file.  
-您可以在 `astro.config.mjs` 文件中指定配置选项。
+You can specify the options in the `astro.config.mjs` file.
+`astro.config.mjs` 파일에서 구성 옵션을 지정할 수 있습니다.
 
 ```javascript
 ...
@@ -87,12 +87,12 @@ export default defineConfig({
   ...
   integrations: [
     ...
-    fuwariLinkCard(), // Plugin here // 在此处添加插件
+    fuwariLinkCard(), // Plugin here // 여기에 플러그인 추가
     ...
 ```
 
-If the order of plugins is complex, you can also specify it as a remark plugin.  
-如果插件顺序较复杂，也可将其指定为 remark 插件。
+If the order of plugins is complex, you can also specify it as a remark plugin.
+플러그인 순서가 복잡한 경우 remark 플러그인으로 지정할 수도 있습니다.
 
 ```javascript
 ...
@@ -104,51 +104,51 @@ export default defineConfig({
     ...
     remarkPlugins: [
       ...
-      remarkLinkCard, // Plugin here // 在此处添加插件
+      remarkLinkCard, // Plugin here // 여기에 플러그인 추가
       ...
 ```
 
 | Name             | Type            | Default                                                                                                                                        | Description                                                                                                                                                                                                                                                                    |  
 |------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | devMode          | boolean         | [import.meta.env.DEV](https://docs.astro.build/en/guides/environment-variables/#default-environment-variables "Default environment variables") | Enable or disable development mode.                                                                                                                                                                                                                                            |
-|                  |                 |                                                                                                                                                | 启用或禁用开发模式                                                                                                                                                                                                                                                            |
+|                  |                 |                                                                                                                                                | 개발 모드 활성화 또는 비활성화                                                                                                                                                                                                                                                            |
 | excludedUrls     | Array<string \| RegExp> | []                                                                                                                                             | A list of strings or regular expressions to exclude specific URLs from processing. This can also help prevent conflicts with other plugins.                                                                                                                                    |
-|                  |                 |                                                                                                                                                | 用于排除特定 URL 的字符串或正则表达式列表，可防止与其他插件冲突                                                                                                                                                                                                                |
+|                  |                 |                                                                                                                                                | 특정 URL을 처리에서 제외하기 위한 문자열 또는 정규 표현식 목록, 다른 플러그인과의 충돌 방지 가능                                                                                                                                                                                                                |
 | linkAttributes   | Object          | { target: '', rel: '' }                                                                                                                        | Set the target and relationship attributes for external links. These attributes can also be left unset to delegate handling to other plugins.                                                                                                                                  |
-|                  |                 |                                                                                                                                                | 设置外部链接的 target 和 rel 属性，留空可交由其他插件处理                                                                                                                                                                                                                     |
+|                  |                 |                                                                                                                                                | 외부 링크의 target 및 rel 속성 설정, 비워두면 다른 플러그인이 처리                                                                                                                                                                                                                     |
 | rewriteRules     | Array\<Object\> | []                                                                                                                                             | Rewrite specific metadata attributes fetched from links, such as the title and description.                                                                                                                                                                                    |
-|                  |                 |                                                                                                                                                | 重写从链接获取的特定元数据属性（如标题和描述）                                                                                                                                                                                                                                |
+|                  |                 |                                                                                                                                                | 링크에서 가져온 특정 메타데이터 속성(예: 제목 및 설명) 재작성                                                                                                                                                                                                                |
 | base             | string          | '/'                                                                                                                                            | Specify the same base path as Astro's. For details, refer [here](https://docs.astro.build/en/reference/configuration-reference/#base "Configuration Reference"). **When used as an integration, if not specified, this option will be determined automatically.**              |
-|                  |                 |                                                                                                                                                | 指定与 Astro 相同的基准路径（[详情](https://docs.astro.build/en/reference/configuration-reference/#base)）。**作为集成使用时，如未指定将自动确定**                                                                                                                              |
+|                  |                 |                                                                                                                                                | Astro와 동일한 기본 경로 지정([자세한 내용](https://docs.astro.build/en/reference/configuration-reference/#base)). **통합으로 사용 시 지정하지 않으면 자동으로 결정됨**                                                                                                                              |
 | defaultThumbnail | string          | ''                                                                                                                                             | Path to the default thumbnail image to use when the metadata does not include image data. It should be relative to the public directory. For example, set `defaultThumbnail` to 'images/default-thumbnail.jpg' if the image is located at public/images/default-thumbnail.jpg. |
-|                  |                 |                                                                                                                                                | 当元数据不含图片时使用的默认缩略图路径（相对于 public 目录）。例如：图片在 public/images/default-thumbnail.jpg 时设为 'images/default-thumbnail.jpg'                                                                                                                              |
+|                  |                 |                                                                                                                                                | 메타데이터에 이미지가 없을 때 사용할 기본 썸네일 경로(public 디렉토리 기준). 예: 이미지가 public/images/default-thumbnail.jpg에 있으면 'images/default-thumbnail.jpg'로 설정                                                                                                                              |
 | internalLink     | Object          | { enabled: false, site: '' }                                                                                                                   | Enable internal link processing within your site.                                                                                                                                                                                                                              |
-|                  |                 |                                                                                                                                                | 启用站点内部链接处理                                                                                                                                                                                                                                                          |
+|                  |                 |                                                                                                                                                | 사이트 내부 링크 처리 활성화                                                                                                                                                                                                                                                          |
 | cache            | Object          | See detailed options below.                                                                                                                    | Download and cache images during the build process.                                                                                                                                                                                                                            |
-|                  |                 |                                                                                                                                                | 在构建过程中下载并缓存图片                                                                                                                                                                                                                                                    |
+|                  |                 |                                                                                                                                                | 빌드 과정에서 이미지 다운로드 및 캐시                                                                                                                                                                                                                                                    |
 
-### linkAttributes  
-### 链接属性配置
+### linkAttributes
+### 링크 속성 구성
 
-| Name   | Type   | Default | Description                                                                                                                      |  
+| Name   | Type   | Default | Description                                                                                                                      |
 |--------|--------|---------|----------------------------------------------------------------------------------------------------------------------------------|
 | target | string | ''      | Specify where to open linked documents. The default (empty) does not set a target on links.                                      |
-|        |        |         | 指定链接文档打开位置（默认留空不设置 target）                                                                                    |
+|        |        |         | 링크 문서를 여는 위치 지정(기본값은 비워두면 target 미설정)                                                                                    |
 | rel    | string | ''      | Define the relationship between the current document and the linked document. The default (empty) does not set any relationship. |
-|        |        |         | 定义当前文档与链接文档的关系（默认留空不设置 rel）                                                                               |
+|        |        |         | 현재 문서와 링크된 문서 간의 관계 정의(기본값은 비워두면 rel 미설정)                                                                               |
 
-### rewriteRules  
-### 重写规则
+### rewriteRules
+### 재작성 규칙
 
-| Name         | Type            | Default | Description                                                   |  
+| Name         | Type            | Default | Description                                                   |
 |--------------|-----------------|---------|---------------------------------------------------------------|
 | url          | RegExp          |         | A regular expression pattern is used to match a specific URL. |
-|              |                 |         | 用于匹配特定 URL 的正则表达式模式                             |
+|              |                 |         | 특정 URL을 일치시키기 위한 정규 표현식 패턴                             |
 | rewriteSteps | Array\<Object\> |         | Defines rewrite rules for specific metadata attributes.       |
-|              |                 |         | 定义特定元数据属性的重写规则                                  |
+|              |                 |         | 특정 메타데이터 속성에 대한 재작성 규칙 정의                                  |
 
-Below is an example that shows how to rewrite the "title" and "description" for metadata fetched from links pointing to a GitHub repository.  
-以下示例展示如何重写 GitHub 仓库链接的 "title" 和 "description" 元数据：
+Below is an example that shows how to rewrite the "title" and "description" for metadata fetched from links pointing to a GitHub repository.
+다음 예제는 GitHub 저장소를 가리키는 링크에서 가져온 "title" 및 "description" 메타데이터를 재작성하는 방법을 보여줍니다:
 
 ```javascript
 rewriteRules: [
@@ -171,56 +171,56 @@ rewriteRules: [
 ],
 ```
 
-| Name        | Type   | Default | Description                                                                                                                                             |  
+| Name        | Type   | Default | Description                                                                                                                                             |
 |-------------|--------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | key         | string |         | Metadata attribute key to be rewritten.                                                                                                                 |
-|             |        |         | 要重写的元数据属性键名                                                                                                                                  |
+|             |        |         | 재작성할 메타데이터 속성 키 이름                                                                                                                                  |
 | pattern     | RegExp |         | Regular expression pattern used to match the current value of the metadata attribute. The part of the value that matches this pattern will be replaced. |
-|             |        |         | 用于匹配元数据属性当前值的正则表达式，匹配部分将被替换                                                                                                  |
+|             |        |         | 메타데이터 속성의 현재 값을 일치시키기 위한 정규 표현식, 일치하는 부분이 교체됨                                                                                                  |
 | replacement | string |         | String to replace the matched pattern in the metadata attribute.                                                                                        |
-|             |        |         | 替换元数据属性中匹配项的字符串                                                                                                                          |
+|             |        |         | 메타데이터 속성에서 일치하는 패턴을 교체할 문자열                                                                                                                          |
 
-### internalLink  
-### 内部链接配置
+### internalLink
+### 내부 링크 구성
 
-| Name    | Type    | Default | Description                                                                                                                                                                                                                                                          |  
+| Name    | Type    | Default | Description                                                                                                                                                                                                                                                          |
 |---------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | enabled | boolean | false   | Enable or disable internal link processing.                                                                                                                                                                                                                          |
-|         |         |         | 启用或禁用内部链接处理                                                                                                                                                                                                                                               |
+|         |         |         | 내부 링크 처리 활성화 또는 비활성화                                                                                                                                                                                                                                               |
 | site    | string  | ''      | Specify the same deployed URL as Astro's. For details, refer [here](https://docs.astro.build/en/reference/configuration-reference/#site "Configuration Reference"). **When used as an integration, if not specified, this option will be determined automatically.** |
-|         |         |         | 指定与 Astro 相同的部署 URL（[详情](https://docs.astro.build/en/reference/configuration-reference/#site)）。**作为集成使用时，如未指定将自动确定**                                                                                                                      |
+|         |         |         | Astro와 동일한 배포 URL 지정([자세한 내용](https://docs.astro.build/en/reference/configuration-reference/#site)). **통합으로 사용 시 지정하지 않으면 자동으로 결정됨**                                                                                                                      |
 
-### cache  
-### 缓存配置
+### cache
+### 캐시 구성
 
 | Name         | Type    | Default                                                                                                           | Description                                                                                                                                                                                                                              |  
 |--------------|---------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | enabled      | boolean | false                                                                                                             | Enable or disable caching.                                                                                                                                                                                                               |
-|              |         |                                                                                                                   | 启用或禁用缓存                                                                                                                                                                                                                           |
+|              |         |                                                                                                                   | 캐싱 활성화 또는 비활성화                                                                                                                                                                                                                           |
 | outDir       | string  | './dist/'                                                                                                         | Output directory path.  For details, refer [here](https://docs.astro.build/en/reference/configuration-reference/#outdir "Configuration Reference"). **Aligning with Astro allows you to benefit from features like image optimization.** |
-|              |         |                                                                                                                   | 输出目录路径（[详情](https://docs.astro.build/en/reference/configuration-reference/#outdir)）。**与 Astro 对齐可享受图片优化等功能**                                                                                                       |
+|              |         |                                                                                                                   | 출력 디렉토리 경로([자세한 내용](https://docs.astro.build/en/reference/configuration-reference/#outdir)). **Astro와 정렬하면 이미지 최적화 등의 기능 혜택**                                                                                                       |
 | cacheDir     | string  | './link-card/'                                                                                                    | Cache directory path. If `devMode` is set to true, the final URL to the cached images will be `base + outDir + cacheDir`. Otherwise, it will be `base + cacheDir`.                                                                       |
-|              |         |                                                                                                                   | 缓存目录路径。`devMode=true` 时最终 URL 为 `base + outDir + cacheDir`，否则为 `base + cacheDir`                                                                                                                                           |
+|              |         |                                                                                                                   | 캐시 디렉토리 경로. `devMode=true`일 때 최종 URL은 `base + outDir + cacheDir`, 그렇지 않으면 `base + cacheDir`                                                                                                                                           |
 | maxFileSize  | number  | 0                                                                                                                 | Maximum file size (in bytes) to cache. Set to 0 for no limit.                                                                                                                                                                            |
-|              |         |                                                                                                                   | 单文件最大缓存大小（字节），0 表示无限制                                                                                                                                                                                                 |
+|              |         |                                                                                                                   | 파일당 최대 캐시 크기(바이트), 0은 무제한                                                                                                                                                                                                 |
 | maxCacheSize | number  | 0                                                                                                                 | Maximum total cache size (in bytes). Set to 0 for no limit.                                                                                                                                                                              |
-|              |         |                                                                                                                   | 缓存总大小上限（字节），0 表示无限制                                                                                                                                                                                                     |
+|              |         |                                                                                                                   | 전체 캐시 크기 상한(바이트), 0은 무제한                                                                                                                                                                                                     |
 | userAgent    | string  | 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36' | Identifier included in HTTP request headers to specify the client.                                                                                                                                                                       |
-|              |         |                                                                                                                   | HTTP 请求头中的客户端标识符                                                                                                                                                                                                              |
+|              |         |                                                                                                                   | HTTP 요청 헤더에 포함된 클라이언트 식별자                                                                                                                                                                                                              |
 
-### Quick and Easy Options Setup  
-### 快速配置选项
+### Quick and Easy Options Setup
+### 빠른 옵션 설정
 
-This plugin uses `@fastify/deepmerge` to simplify options setup.  
-本插件使用 `@fastify/deepmerge` 简化选项配置。
+This plugin uses `@fastify/deepmerge` to simplify options setup.
+이 플러그인은 `@fastify/deepmerge`를 사용하여 옵션 설정을 간소화합니다.
 
 <https://www.npmjs.com/package/@fastify/deepmerge>
 
-## HTML Structure for Styling  
-## 用于样式化的 HTML 结构
+## HTML Structure for Styling
+## 스타일링을 위한 HTML 구조
 
-The styles are specified in `src/styles/link-card.css`, and the HTML is automatically generated. Below is an example structure to guide you when customizing the styles:  
-样式定义在 `src/styles/link-card.css` 中，HTML 会自动生成。以下是自定义样式时的参考结构：
+The styles are specified in `src/styles/link-card.css`, and the HTML is automatically generated. Below is an example structure to guide you when customizing the styles:
+스타일은 `src/styles/link-card.css`에 정의되어 있으며, HTML은 자동으로 생성됩니다. 다음은 스타일을 사용자 정의할 때 참고할 구조 예제입니다:
 
 ```html
 <div class="link-card__container">

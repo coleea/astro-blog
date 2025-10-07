@@ -2,7 +2,7 @@
 title: Include Video in the Posts
 published: 1001-08-01
 description: This post demonstrates how to include embedded video in a blog post.
-image: "https://api.lxtu.cn/api.php?category=clysj"
+image: "https://eopageapi.2x.nz/pic?img"
 tags: [Example, Video]
 category: Default
 draft: false
@@ -10,7 +10,7 @@ series: Examples
 ---
 
 Just copy the embed code from YouTube or other platforms, and paste it in the markdown file.
-只需从 YouTube 或其他平台复制嵌入代码，然后将其粘贴到 Markdown 文件中。
+YouTube 또는 다른 플랫폼에서 임베드 코드를 복사하여 Markdown 파일에 붙여넣기만 하면 됩니다.
 
 ```yaml
 ---

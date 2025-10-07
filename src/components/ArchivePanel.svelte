@@ -112,9 +112,9 @@ onMount(async () => {
                     <div class="h-3 w-3 bg-none rounded-full outline outline-[var(--primary)] mx-auto -outline-offset-[2px] z-50 outline-3"></div>
                 </div>
                 
-                <!-- 文章数量统计 -->
+                <!-- 문장 수량 통계 -->
                 <div class="w-[70%] md:w-[80%] transition text-left text-50">
-                    {group.posts.length} 篇文章
+                    {group.posts.length} 개의 글
                 </div>
             </div>
 

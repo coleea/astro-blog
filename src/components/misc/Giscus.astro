@@ -11,7 +11,7 @@ const configHTML = `
         data-emit-metadata="1"
         data-input-position="top"
         data-theme="https://giscus-dkh.pages.dev/A.css"
-        data-lang="zh-CN"
+        data-lang="ko"
         data-loading="lazy"
         crossorigin="anonymous"
         async>
@@ -37,7 +37,8 @@ const config = {
   emitMetadata: extractAttribute(configHTML, 'data-emit-metadata') || '0',
   inputPosition: extractAttribute(configHTML, 'data-input-position') || 'bottom',
   theme: extractAttribute(configHTML, 'data-theme') || 'preferred_color_scheme',
-  lang: extractAttribute(configHTML, 'data-lang') || 'zh-CN',
+  lang: extractAttribute(configHTML, 'data-lang') || 'ko',
+  // lang: extractAttribute(configHTML, 'data-lang') || 'zh-CN',
   loading: extractAttribute(configHTML, 'data-loading') || 'lazy'
 };
 ---

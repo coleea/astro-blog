@@ -2,7 +2,7 @@
 title: Expressive Code Example
 published: 1002-04-10
 description: How code blocks look in Markdown using Expressive Code.
-image: "https://api.lxtu.cn/api.php?category=pcbz"
+image: "https://eopageapi.2x.nz/pic?img=ua"
 tags: [Markdown, Blogging, Demo]
 category: Default
 draft: false
@@ -10,25 +10,25 @@ series: Examples
 ---
 
 Here, we'll explore how code blocks look using [Expressive Code](https://expressive-code.com/). The provided examples are based on the official documentation, which you can refer to for further details.
-在这里，我们将探索使用 [Expressive Code](https://expressive-code.com/) 的代码块显示效果。提供的示例基于官方文档，您可以参考该文档获取更多细节。
+여기서는 [Expressive Code](https://expressive-code.com/)를 사용한 코드 블록 표시 효과를 살펴봅니다. 제공된 예제는 공식 문서를 기반으로 하며, 자세한 내용은 해당 문서를 참조하실 수 있습니다.
 
 ## Expressive Code
 
 ### Syntax Highlighting
-### 语法高亮
+### 구문 강조
 
 [Syntax Highlighting](https://expressive-code.com/key-features/syntax-highlighting/)
-[语法高亮](https://expressive-code.com/key-features/syntax-highlighting/)
+[구문 강조](https://expressive-code.com/key-features/syntax-highlighting/)
 
 #### Regular syntax highlighting
-#### 常规语法高亮
+#### 일반 구문 강조
 
 ```js
 console.log('This code is syntax highlighted!')
 ```
 
 #### Rendering ANSI escape sequences
-#### 渲染 ANSI 转义序列
+#### ANSI 이스케이프 시퀀스 렌더링
 
 ```ansi
 ANSI colors:
@@ -48,13 +48,13 @@ Text formatting: [1mBold[0m [2mDimmed[0m [3mItalic[0m [4mUnderline[0m
 ```
 
 ### Editor & Terminal Frames
-### 编辑器与终端框架
+### 에디터 및 터미널 프레임
 
 [Editor & Terminal Frames](https://expressive-code.com/key-features/frames/)
-[编辑器与终端框架](https://expressive-code.com/key-features/frames/)
+[에디터 및 터미널 프레임](https://expressive-code.com/key-features/frames/)
 
 #### Code editor frames
-#### 代码编辑器框架
+#### 코드 에디터 프레임
 
 ```js title="my-test-file.js"
 console.log('Title attribute example')
@@ -68,7 +68,7 @@ console.log('Title attribute example')
 ```
 
 #### Terminal frames
-#### 终端框架
+#### 터미널 프레임
 
 ```bash
 echo "This terminal frame has no title"
@@ -81,7 +81,7 @@ Write-Output "This one has a title!"
 ```
 
 #### Overriding frame types
-#### 覆盖框架类型
+#### 프레임 유형 재정의
 
 ```sh frame="none"
 echo "Look ma, no frame!"
@@ -96,13 +96,13 @@ New-Alias tail Watch-Tail
 ```
 
 ### Text & Line Markers
-### 文本与行标记
+### 텍스트 및 라인 마커
 
 [Text & Line Markers](https://expressive-code.com/key-features/text-markers/)
-[文本与行标记](https://expressive-code.com/key-features/text-markers/)
+[텍스트 및 라인 마커](https://expressive-code.com/key-features/text-markers/)
 
 #### Marking full lines & line ranges
-#### 标记整行与行范围
+#### 전체 라인 및 라인 범위 표시
 
 ```js {1, 4, 7-8}
 // Line 1 - targeted by line number
@@ -116,7 +116,7 @@ New-Alias tail Watch-Tail
 ```
 
 #### Selecting line marker types (mark, ins, del)
-#### 选择行标记类型（mark, ins, del）
+#### 라인 마커 유형 선택 (mark, ins, del)
 
 ```js title="line-markers.js" del={2} ins={3-4} {6}
 function demo() {
@@ -129,7 +129,7 @@ function demo() {
 ```
 
 #### Adding labels to line markers
-#### 为行标记添加标签
+#### 라인 마커에 레이블 추가
 
 ```jsx {"1":5} del={"2":7-8} ins={"3":10-12}
 // labeled-line-markers.jsx
@@ -148,7 +148,7 @@ function demo() {
 ```
 
 #### Adding long labels on their own lines
-#### 在独立行添加长标签
+#### 별도 라인에 긴 레이블 추가
 
 ```jsx {"1. Provide the value prop here:":5-6} del={"2. Remove the disabled and active states:":8-10} ins={"3. Add this to render the children inside the button:":12-15}
 // labeled-line-markers.jsx
@@ -170,7 +170,7 @@ function demo() {
 ```
 
 #### Using diff-like syntax
-#### 使用类似 diff 的语法
+#### diff와 유사한 구문 사용
 
 ```diff
 +this line will be marked as inserted
@@ -190,7 +190,7 @@ this is a regular line
 ```
 
 #### Combining syntax highlighting with diff-like syntax
-#### 结合语法高亮与类似 diff 的语法
+#### 구문 강조와 diff 유사 구문 결합
 
 ```diff lang="js"
   function thisIsJavaScript() {
@@ -202,7 +202,7 @@ this is a regular line
 ```
 
 #### Marking individual text inside lines
-#### 标记行内特定文本
+#### 라인 내 특정 텍스트 표시
 
 ```js "given text"
 function demo() {
@@ -212,21 +212,21 @@ function demo() {
 ```
 
 #### Regular expressions
-#### 正则表达式
+#### 정규 표현식
 
 ```ts /ye[sp]/
 console.log('The words yes and yep will be marked.')
 ```
 
 #### Escaping forward slashes
-#### 转义正斜杠
+#### 슬래시 이스케이프
 
 ```sh /\/ho.*\//
 echo "Test" > /home/test.txt
 ```
 
 #### Selecting inline marker types (mark, ins, del)
-#### 选择行内标记类型（mark, ins, del）
+#### 인라인 마커 유형 선택 (mark, ins, del)
 
 ```js "return true;" ins="inserted" del="deleted"
 function demo() {
@@ -237,13 +237,13 @@ function demo() {
 ```
 
 ### Word Wrap
-### 自动换行
+### 자동 줄바꿈
 
 [Word Wrap](https://expressive-code.com/key-features/word-wrap/)
-[自动换行](https://expressive-code.com/key-features/word-wrap/)
+[자동 줄바꿈](https://expressive-code.com/key-features/word-wrap/)
 
 #### Configuring word wrap per block
-#### 按代码块配置自动换行
+#### 코드 블록별 자동 줄바꿈 설정
 
 ```js wrap
 // Example with wrap
@@ -262,7 +262,7 @@ function getLongString() {
 ```
 
 #### Configuring indentation of wrapped lines
-#### 配置换行后的缩进
+#### 줄바꿈 후 들여쓰기 설정
 
 ```js wrap preserveIndent
 // Example with preserveIndent (enabled by default)
@@ -281,10 +281,10 @@ function getLongString() {
 ```
 
 ## Collapsible Sections
-## 可折叠部分
+## 접을 수 있는 섹션
 
 [Collapsible Sections](https://expressive-code.com/plugins/collapsible-sections/)
-[可折叠部分](https://expressive-code.com/plugins/collapsible-sections/)
+[접을 수 있는 섹션](https://expressive-code.com/plugins/collapsible-sections/)
 
 ```js collapse={1-5, 12-14, 21-24}
 // All this boilerplate setup code will be collapsed
@@ -314,13 +314,13 @@ engine.shutdown({ reason: 'End of example boilerplate code' })
 ```
 
 ## Line Numbers
-## 行号
+## 라인 번호
 
 [Line Numbers](https://expressive-code.com/plugins/line-numbers/)
-[行号](https://expressive-code.com/plugins/line-numbers/)
+[라인 번호](https://expressive-code.com/plugins/line-numbers/)
 
 ### Displaying line numbers per block
-### 按代码块显示行号
+### 코드 블록별 라인 번호 표시
 
 ```js showLineNumbers
 // This code block will show line numbers
@@ -337,7 +337,7 @@ console.log('Sorry, do you know what line I am on?')
 ```
 
 ### Changing the starting line number
-### 更改起始行号
+### 시작 라인 번호 변경
 
 ```js showLineNumbers startLineNumber=5
 console.log('Greetings from line 5!')
