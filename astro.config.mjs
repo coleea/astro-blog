@@ -42,7 +42,7 @@ export default defineConfig({
   
   // site: "https://fuwari.oh1.top/",
   site: "https://coleea.github.io",
-  base: "/astro-blog",
+  base: "/",
   trailingSlash: "always",
 
   /*image: {
