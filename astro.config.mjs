@@ -41,7 +41,8 @@ export default defineConfig({
   },
   
   // site: "https://fuwari.oh1.top/",
-  site: "https://coleea.github.io",
+  // site: "https://coleea.github.io",
+  site: "https://leekb.com",
   base: "/",
   trailingSlash: "always",
 
