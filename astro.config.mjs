@@ -40,8 +40,9 @@ export default defineConfig({
     defaultStrategy: "hover"
   },
   
-  site: "https://fuwari.oh1.top/",
-  base: "/",
+  // site: "https://fuwari.oh1.top/",
+  site: "https://coleea.github.io",
+  base: "/astro-blog",
   trailingSlash: "always",
 
   /*image: {
