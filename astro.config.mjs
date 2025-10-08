@@ -36,7 +36,7 @@ export default defineConfig({
     compressHTML: true,
   },
   prefetch: {
-    prefetchAll: true,
+    prefetchAll: false,
     // 'tap': Prefetch just before you click on the link.
     // 'hover': Prefetch when you hover over or focus on the link. (default)
     // 'viewport': Prefetch as the links enter the viewport.

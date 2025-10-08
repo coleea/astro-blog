@@ -70,8 +70,8 @@ const { remarkPluginFrontmatter } = await entry.render();
   >
     {pinned && <div class="absolute top-2 left-2 text-[var(--primary)]">
         <Icon name="mdi:pin" class="w-5 h-5" />
-    </div>}
-    <a data-astro-prefetch 
+    </div>}    
+    <a data-astro-prefetch="viewport"
       href={url}
       class="transition group w-full block font-bold mb-3 text-3xl text-90
         hover:text-[var(--primary)] dark:hover:text-[var(--primary)]

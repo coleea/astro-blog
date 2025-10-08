@@ -8,8 +8,8 @@
 
 ## ✨ 특징
 
-- [x] [Astro](https://astro.build) 및 [Tailwind CSS](https://tailwindcss.com)로 구축됨
-- [x] 부드러운 애니메이션 및 페이지 전환
+- [x] [Astro](https://astro.build) 기반으로 구축됨
+- [x] 부드러운 애니메이션 및 페이지 전환 (by @swup/astro)
 - [x] 라이트 모드 / 다크 모드
 - [x] 사용자 정의 가능한 테마 색상 및 배너
 - [x] 반응형 디자인
@@ -22,7 +22,7 @@
 - Node.js <= 22
 - pnpm <= 9
 
-## 🚀 사용하는 방법 1
+## 🚀 사용방법 1
 
 [create-fuwari](https://github.com/L4Ph/create-fuwari)를 사용하여 로컬에서 프로젝트를 초기화합니다.
 
