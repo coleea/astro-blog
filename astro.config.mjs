@@ -1,4 +1,5 @@
 // astro.config.mjs
+import { visualizer } from "rollup-plugin-visualizer";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwindPlugin from "@astrojs/tailwind";
@@ -195,6 +196,14 @@ export default defineConfig({
   },
 
   vite: {
+    plugins: [
+      visualizer({
+        open: true,
+        gzipSize: true,
+        brotliSize: false,
+        filename: "dist/stats.html",
+      }),
+    ],
     build: {
       rollupOptions: {
         onwarn(warning, warn) {
