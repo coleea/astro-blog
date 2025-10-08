@@ -17,11 +17,13 @@ export const siteConfig: SiteConfig = {
   banner: {
     enable: true,
     src: "./assets/images/Celestia.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    // src: "./assets/images/demo-banner.DFyx781H_Z1SsDuN.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    // src: "./assets/images/demo-banner.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     // src: "./assets/images/featured-sicp.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     // src: "./assets/images/sicp_wide.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
-      enable: true, // Display the credit text of the banner image
+      enable: false, // Display the credit text of the banner image
       text: "Pixiv @chokei", // Credit text to be displayed
       url: "https://www.pixiv.net/artworks/122782209", // (Optional) URL link to the original artwork or artist's page
     },
@@ -60,7 +62,8 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-  avatar: "./assets/images/avatar.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/' 원assets/images/demo-avatar.png,선택https://q2.qlogo.cn/headimg_dl?dst_uin=189563385&spec=0
+  // avatar: "./assets/images/avatar.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/' 원assets/images/demo-avatar.png,선택https://q2.qlogo.cn/headimg_dl?dst_uin=189563385&spec=0
+  avatar: "./assets/images/avatar3.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/' 원assets/images/demo-avatar.png,선택https://q2.qlogo.cn/headimg_dl?dst_uin=189563385&spec=0
   name: "leekb",
   bio: "bio",
   links: [
