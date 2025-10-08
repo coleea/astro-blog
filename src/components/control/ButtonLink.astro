@@ -6,7 +6,7 @@ interface Props {
 }
 const { badge, url, label } = Astro.props;
 ---
-<a href={url} aria-label={label}>
+<a data-astro-prefetch href={url} aria-label={label}>
     <button
         class:list={`
             w-full

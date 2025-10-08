@@ -63,7 +63,7 @@ const groups: { category: string; series: Series[] }[] = (() => {
             <div>
                 <!-- 分类名单独一行 - 左对齐 -->
                 <div class="w-full pb-2 pt-4 text-left">
-                    <a aria-label={group.category} href={getCategoryUrl(group.category)}
+                    <a data-astro-prefetch aria-label={group.category} href={getCategoryUrl(group.category)}
                         class="btn-plain scale-animation rounded-lg h-11 font-bold px-2 active:scale-95 text-2xl inline-flex items-center"
                     >
                         {group.category}
@@ -87,7 +87,7 @@ const groups: { category: string; series: Series[] }[] = (() => {
                 </div>
                 
                 {group.series.map(s => (
-                    <a href={getPostUrlBySlug(s.posts[s.posts.length-1].slug)}
+                    <a data-astro-prefetch href={getPostUrlBySlug(s.posts[s.posts.length-1].slug)}
                        aria-label={s.name}
                        class="group btn-plain !block h-10 w-full rounded-lg hover:text-[initial]"
                     >

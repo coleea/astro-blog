@@ -32,13 +32,13 @@ const isCollapsed = sortedSeriesPosts.length > COLLAPSE_THRESHOLD
   <div id="series-posts" class:list={["space-y-2", 
     {"overflow-hidden max-h-60": isCollapsed, "max-h-[10000px]": !isCollapsed}]}>
     {sortedSeriesPosts.map((post) => (
-      <a href={getPostUrlBySlug(post.slug)} 
+      <a data-astro-prefetch href={getPostUrlBySlug(post.slug)} 
          class="block p-2 rounded hover:bg-[var(--btn-plain-bg-hover)] truncate">
         <div class="text-sm font-medium text-neutral-800 dark:text-neutral-200 truncate">
           {post.data.title}
         </div>
         <div class="text-xs text-neutral-500 dark:text-neutral-400">
-          {post.data.published.toLocaleDateString('zh-CN')}
+          {post.data.published.toLocaleDateString('ko')}
         </div>
       </a>
     ))}

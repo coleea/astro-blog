@@ -71,7 +71,7 @@ const { remarkPluginFrontmatter } = await entry.render();
     {pinned && <div class="absolute top-2 left-2 text-[var(--primary)]">
         <Icon name="mdi:pin" class="w-5 h-5" />
     </div>}
-    <a 
+    <a data-astro-prefetch 
       href={url}
       class="transition group w-full block font-bold mb-3 text-3xl text-90
         hover:text-[var(--primary)] dark:hover:text-[var(--primary)]
@@ -127,7 +127,7 @@ const { remarkPluginFrontmatter } = await entry.render();
 
   <!-- 封面图片区域 -->
   {hasCover && (
-    <a 
+    <a data-astro-prefetch 
       href={url} 
       aria-label={title}
       class:list={[
@@ -157,7 +157,7 @@ const { remarkPluginFrontmatter } = await entry.render();
 
   <!-- 无封面时的进入按钮 -->
   {!hasCover && (
-    <a 
+    <a data-astro-prefetch 
       href={url} 
       aria-label={title} 
       class="!hidden md:!flex btn-regular w-[3.25rem]

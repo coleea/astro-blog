@@ -85,7 +85,7 @@ const hasCategory = category && category.trim() !== "";
       </div>
       <div class="flex flex-row flex-nowrap items-center">
         <!-- 分类链接 -->
-        <a 
+        <a data-astro-prefetch 
           href={getCategoryUrl(category)} 
           aria-label={`View all posts in the ${category} category`}
           class="link-lg transition text-50 text-sm font-medium

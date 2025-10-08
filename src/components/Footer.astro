@@ -10,17 +10,17 @@ const currentYear = new Date().getFullYear();
 <div class="transition border-dashed border-[oklch(85%_0.01_var(--hue))] dark:border-white/15 rounded-2xl mb-12 flex flex-col items-center justify-center px-6">
     <div class="transition text-50 text-sm text-center">
         &copy; <span id="copyright-year">{currentYear}</span> {profileConfig.name}. All Rights Reserved. /
-        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('rss.xml')}>RSS</a> /
-        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('sitemap-index.xml')}>Sitemap</a>
+        <a data-astro-prefetch class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('rss.xml')}>RSS</a> /
+        <a data-astro-prefetch class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('sitemap-index.xml')}>Sitemap</a>
         <br>
         Powered by
-        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://astro.build">Astro</a> &
-        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/yCENzh/Fuwari-yCENzh">Fuwari</a>
+        <a data-astro-prefetch class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://astro.build">Astro</a> &
+        <a data-astro-prefetch class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/yCENzh/Fuwari-yCENzh">Fuwari</a>
         <br />
-        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://icp.gov.moe/?keyword=20251413">모에ICP비20251413호</a>
-        <a href="https://icp.redcha.cn/beian/ICP-2025088520.html" title="차ICP비2025088520호" target="_blank">차ICP비2025088520호</a>
+        <a data-astro-prefetch class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://icp.gov.moe/?keyword=20251413">모에ICP비20251413호</a>
+        <a data-astro-prefetch href="https://icp.redcha.cn/beian/ICP-2025088520.html" title="차ICP비2025088520호" target="_blank">차ICP비2025088520호</a>
         <br />
-        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://www.travellings.cn/train.html">새로운 세계로 가는 열차-Travelling</a>
+        <a data-astro-prefetch class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://www.travellings.cn/train.html">새로운 세계로 가는 열차-Travelling</a>
     </div>
 </div>
 

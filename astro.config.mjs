@@ -26,7 +26,7 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
 import mdx from "@astrojs/mdx";
 import partytown from "@astrojs/partytown";
-import rehypeExternalLinks from 'rehype-external-links';
+import rehypeExternalLinks from "rehype-external-links";
 import { LinkCardComponent } from "./src/plugins/rehype-component-link-card.mjs";
 
 // https://astro.build/config
@@ -36,10 +36,14 @@ export default defineConfig({
     compressHTML: true,
   },
   prefetch: {
-    prefetchAll: false,
-    defaultStrategy: "hover"
+    prefetchAll: true,
+    // 'tap': Prefetch just before you click on the link.
+    // 'hover': Prefetch when you hover over or focus on the link. (default)
+    // 'viewport': Prefetch as the links enter the viewport.
+    // 'load': Prefetch all links on the page after the page is loaded.
+    defaultStrategy: "hover",
   },
-  
+
   // site: "https://fuwari.oh1.top/",
   // site: "https://coleea.github.io",
   site: "https://leekb.com",
@@ -88,12 +92,12 @@ export default defineConfig({
         pluginCollapsibleSections(),
         pluginLineNumbers(),
         pluginLanguageBadge(),
-        pluginCustomCopyButton()
+        pluginCustomCopyButton(),
       ],
       defaultProps: {
         wrap: false,
         overridesByLang: {
-          'shellsession': {
+          shellsession: {
             showLineNumbers: false,
           },
         },
@@ -103,7 +107,8 @@ export default defineConfig({
         borderRadius: "0.5rem",
         borderColor: "none",
         codeFontSize: "0.875rem",
-        codeFontFamily: "'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+        codeFontFamily:
+          "'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
         codeLineHeight: "1.5rem",
         frames: {
           editorBackground: "var(--codeblock-bg)",
@@ -114,17 +119,17 @@ export default defineConfig({
           editorActiveTabIndicatorBottomColor: "var(--primary)",
           editorActiveTabIndicatorTopColor: "none",
           editorTabBarBorderBottomColor: "var(--codeblock-topbar-bg)",
-          terminalTitlebarBorderBottomColor: "none"
+          terminalTitlebarBorderBottomColor: "none",
         },
         textMarkers: {
           delHue: 0,
           insHue: 180,
-          markHue: 250
-        }
+          markHue: 250,
+        },
       },
       frames: {
         showCopyToClipboardButton: false,
-      }
+      },
     }),
     mdx(),
     svelte(),
@@ -161,7 +166,7 @@ export default defineConfig({
       [
         rehypeExternalLinks,
         {
-        target: '_blank',
+          target: "_blank",
         },
       ],
       [
