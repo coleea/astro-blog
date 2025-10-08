@@ -1,10 +1,10 @@
 // astro.config.mjs
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
-import tailwind from "@astrojs/tailwind";
+import tailwindPlugin from "@astrojs/tailwind";
 import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
-import swup from "@swup/astro";
+import swupPlugin from "@swup/astro";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
@@ -25,7 +25,7 @@ import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
 import mdx from "@astrojs/mdx";
-import partytown from "@astrojs/partytown";
+// import partytown from "@astrojs/partytown";
 import rehypeExternalLinks from "rehype-external-links";
 import { LinkCardComponent } from "./src/plugins/rehype-component-link-card.mjs";
 
@@ -58,12 +58,11 @@ export default defineConfig({
   },*/
 
   integrations: [
-    tailwind({
+    tailwindPlugin({
       nesting: true,
     }),
-    partytown(),
-
-    swup({
+    // partytown(),
+    swupPlugin({
       theme: false,
       animationClass: "transition-swup-",
       containers: ["main", "#toc", "#series"],
