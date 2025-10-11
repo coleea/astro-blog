@@ -1,8 +1,8 @@
 ---
-title: React.js still doesn't support ESM. But why it cause problem
+title: React.js still doesn't support ESM. But why it can be problematic
 published: 2025-10-12
 description: ""
-image: "./index.jpeg"
+image: "./opposite-words-for-fast-and-slow-cartoon-vector.jpg"
 tags: []
 category: Default
 draft: false
@@ -11,9 +11,11 @@ draft: false
 
 https://github.com/facebook/react/issues/11503
 
-React team once said that `Currently we only ship CommonJS versions of all packages. However we might want to ship them as ESM in the future` in 2017-11-10. 
+in 2017-11-10, React team member once said that 
 
-And 8 years later (2025-10-12) , still not support ESM.
+> `Currently we only ship CommonJS versions of all packages. However we might want to ship them as ESM in the future` 
+
+And 8 years later (2025-10-12), React still does not support ESM.
 
 But you might ask `hey, whether react.js support esm or not, my project works well. so I have no problem anything.`
 
@@ -46,8 +48,9 @@ setTimeout(() => {
 
 In summary, CJS-based export statement cannot be optimized by Javascript Engine (such as V8, Javascript Core). While ESM-based export statement can be optimized.
 
-because exported variables/functions in ES Module cannot be mutated, in other words, It is immutable. So Javascript Engine can be determine the exact memory location at Compile time.
+because exported variables/functions in ES Module cannot be mutated, in other words, It is immutable. So Javascript Engine can be determine the exact memory location at Compile time, and reuse them until browser tab is closed.
 
-But It it too vage statment. Can we check this optimization in our eyes? Sure.
+But It it too vague statment. Can we check this optimization in our eyes? Sure.
 
-node.js and chrome use the same Javascript engine : V8. So we can check this optimization via node.js.
+node.js and chrome use the same Javascript engine : `V8`. let's check this optimization via node.js.
+
