@@ -5,7 +5,7 @@ description: "the entire process when Navigation of web browser is triggered"
 image: "./index.jpeg"
 tags: []
 category: Default
-draft: true
+draft: false
 
 ---
 
