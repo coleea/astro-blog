@@ -5,7 +5,7 @@ description: This post demonstrates how to include embedded video in a blog post
 image: "https://eopageapi.2x.nz/pic?img"
 tags: [Example, Video]
 category: Default
-draft: false
+draft: true
 series: Examples
 ---
 
